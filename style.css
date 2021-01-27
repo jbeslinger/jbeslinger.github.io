@@ -1,3 +1,9 @@
+span
+{
+	font-family:			'Courier New', monospace;
+	color:					white;
+}
+
 .lite
 {
 	background-image:		url(images/background_lite.png);
