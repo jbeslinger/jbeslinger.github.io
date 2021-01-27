@@ -1,15 +1,89 @@
-.body-lite
+.lite
 {
-	background-image: url(images/background_lite.png);
+	background-image:		url(images/background_lite.png);
 }
-.body-dark
+.dark
 {
-	background-image: url(images/background_dark.png);
+	background-image:		url(images/background_dark.png);
 }
 
-div
+.container
 {
-	background-color: white;
-	padding: 16px;
-	box-shadow: 4px 4px 8px #302020
+	position:				relative;
+	padding:				32px;
+	background:				#302020;
+	height:					80%;
+	box-shadow:				4px 4px 8px #302020
 }
+	.container .top
+	{
+		position:			absolute;
+		background-image:	url(images/bdr-top.png);
+		top:				0;
+		left:				0;
+		width:				100%;
+		height:				32px;
+	}
+	.container .top-left
+	{
+		position:			absolute;
+		background-image:	url(images/bdr-tpleft.png);
+		top:				0;
+		left:				0;
+		width:				32px;
+		height:				32px;
+	}
+	.container .left
+	{
+	    position:			absolute;
+	    background-image:	url(images/bdr-left.png);
+	    top:				0;
+	    left:				0;
+	    width:				32px;
+	    height:				100%;
+	}
+	.container .top-right
+	{
+		position:			absolute;
+		background-image:	url(images/bdr-tpright.png);
+		top:				0;
+		right:				0;
+		width:				32px;
+		height:				32px;
+	}
+	.container .right
+	{
+	    position:			absolute;
+	    background-image:	url(images/bdr-right.png);
+	    top:				0;
+	    right:				0;
+	    width:				32px;
+	    height:				100%;
+	}
+	.container .bottom
+	{
+	    position:			absolute;
+	    background-image:	url(images/bdr-bottom.png);
+	    bottom:				0;
+	    left:				0;
+	    width:				100%;
+	    height:				32px;
+	}
+	.container .bottom-left
+	{
+	    position:			absolute;
+	    background-image:	url(images/bdr-btleft.png);
+	    bottom:				0;
+	    left:				0;
+	    width:				32px;
+	    height:				32px;
+	}
+	.container .bottom-right
+	{
+	    position:			absolute;
+	    background-image:	url(images/bdr-btright.png);
+	    bottom:				0;
+	    right:				0;
+	    width:				32px;
+	    height:				32px;
+	}
