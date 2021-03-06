@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Peruvian-Style Chicken Wings with Ají Verde Sauce</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://preview.redd.it/mlbdc4qxud741.jpg?width=960&crop=smart&auto=webp&s=68efa2f9508ec1c432d95c9e620bd192989a4e8e"></td>
+			<td><h1>Peruvian-Style Chicken Wings with Ají Verde Sauce</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 30 minutes</p></td>
+				<td><p>Total time: 1 hour 30 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input id="serves" type="number" min="0" value="4" step="1" onchange="recipe.adjustIngredients(this.value/4);updateCalories();"></p></td>
+				<td><p>Calories: <input id="calories" type="number" min="0" value="" step="50"></p></td>
+				<td><p>Per serving: <input id="per_serving" type="number" min="0" value="871" step="50" onchange="updateCalories();"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p></p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<p>For the green sauce</p>
+			<li><span class="ingredient" data-quantity="3" data-unit="">3</span> jalapeños, roughly chopped</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> ají amarillo pepper paste</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> fresh cilantro leaves</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="cloves">2 cloves</span> garlic</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> mayonnaise</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> sour cream</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="teaspoon">2 teaspoons</span> lime juice</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoon</span> white vinegar</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> olive oil</li>
+
+			<p>For the chicken wings + sauce</p>
+			<li><span class="ingredient" data-quantity="2" data-unit="pound">2 pounds</span> chicken wings, thawed</li>	
+			<li><span class="ingredient" data-quantity="2" data-unit="teaspoon">2 teaspoons</span> kosher salt</li>	
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> ground cumin</li>	
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> paprika</li>	
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoon</span> freshly ground black pepper</li>	
+			<li><span class="ingredient" data-quantity="3" data-unit="clove">3 cloves</span> garlic, minced</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> white vinegar</li>	
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> olive oil</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<p>For the ají verde sauce</p>
+			<li>Combine jalapeños, ají amarillo (if using), cilantro, garlic, mayonnaise, sour cream, lime juice, and vinegar in the jar of a blender.</li>
+			<li>Blend on high speed, scraping down as necessary, until smooth. With blender running, slowly drizzle in olive oil. Season to taste with salt and pepper.</li>
+			<li>Sauce will be quite loose at this point, but will thicken as it sits. Transfer to a sealed container and refrigerate until ready to use.</li>
+			
+			<p>For the chicken wings</p>
+			<li>Thaw chicken wing pieces and bake at 400 for 45-50 minutes or until golden.</li>
+			<li>Combine salt, cumin, paprika, pepper, garlic, vinegar, and oil in a small bowl and massage with fingertips until homogeneous.</li>
+			<li>Toss chicken wings in the sauce.</li>
+			<li>Serve with ají verde.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+    <script>
+    	function updateCalories()
+    	{
+    		var serves = document.getElementById("serves");
+			var calories = document.getElementById("calories");
+			var per_serving = document.getElementById("per_serving");
+			calories.value = per_serving.value * serves.value;
+		}
+		updateCalories();
+	</script>
+</body>
+</html>

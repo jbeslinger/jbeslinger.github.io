@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>Aloo Gobi</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2019/03/aloo-gobi-recipe-500x500.jpg"></td>
+			<td><h1>Aloo Gobi</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 30 minutes</p></td>
+				<td><p>Total time: 30 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="4" step="1" onchange="recipe.adjustIngredients(this.value/4)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Aloo Gobi is a very classic Indian dish of potatoes and cauliflower. It's a one pot, super simple, comforting dish that's ready in 30 minutes flat.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="3" data-unit="tablespoon">3 tablespoons</span> cooking oil, (or any sub)</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="">2</span> potatoes, medium russet, cubed (1-1.5")</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="head">1 head</span> cauliflower, florets</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="clove">3 cloves</span> garlic, minced</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> onion, small red, diced</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="">2</span> tomatoes, medium, chopped</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoons</span> cumin seeds</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="teaspoon">1/4 teaspoon</span> ginger powder</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> turmeric</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoon</span> coriander powder</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="teaspoon">1/4 teaspoon</span> chili powder</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> kasoori methi (fenugreek) leaves, dried</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> garam masala</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Heat 2/3 teaspoon of oil in a pan on medium heat. Add cauliflower florets and fry for 2-3 minutes and then add the sliced potatoes.  Fry on medium-low flame for 7-8 minutes till potatoes and cauliflower have some brown spots on them.  Drain on a tissue paper and set aside.</li>
+			<li>In the same pan heat 1/3 teaspoon of oil on medium heat and add cumin seeds and let them crackle.</li>
+			<li>Add the onions and cook for 2 minutes till translucent.</li>
+			<li>Then add the garlic and ginger powder on top of that and cook for 2 extra minutes.</li>
+			<li>Then add the chopped tomatoes and cook for 2 minutes until they are little soft.</li>
+			<li>Add turmeric, red chili, coriander, & kasoori methi.  Cover the pan and let the masala cook for 2-3 minutes, then add potatoes.</li>
+			<li>Add garam masala and cook the potato & cauliflower on medium-low heat for 5-6 minutes.  Stir occasionally.</li>
+			<li>Add salt to taste and cover the pan to cook for additional 6-7 minutes on low flame or until potato and cauliflower are tender, but not soggy.  If the masala sticks, add a tablespoon of water in at a time.</li>
+			<li>Garnish with cilantro leaves and serve with any Indian bread.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

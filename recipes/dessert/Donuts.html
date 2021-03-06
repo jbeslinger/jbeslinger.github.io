@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>Quick Donuts</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="http://www.pamperedchef.com/iceberg/com/recipe/1435477-lg.jpg"></td>
+			<td><h1>Quick Donuts</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 5 minutes</p></td>
+				<td><p>Total time: 5 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="5" step="1" onchange="recipe.adjustIngredients(this.value/5)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Possibly the easiest, quickest, cheapest way to make donuts ever.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li>Vegetable or canola oil for frying</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="package">1 package</span> Pillsbury Buttermilk biscuits (5ct)</li>
+			
+			<p>Cinnamon sugar donuts</p>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> sugar</li>
+			<li><span class="ingredient" data-quantity="1 1/2" data-unit="tablespoon">1 1/2 tablespoons</span> cinnamon</li>
+
+			<p>Jelly-filled donuts</p>
+			<li>Jelly - grape or whatever jam/jelly you prefer</li>
+			<li>Squeeze bottle</li>
+			<li>Powdered sugar</li>
+
+			<p>Maple-bourbon glazed donuts</p>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> butter</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> maple syrup</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> bourbon</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> powdered sugar</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Pour about 1.5" of oil in a small pot & bring to 360°.</li>
+			<li>If you're making cinnamon sugar donuts, combine the sugar and cinnamon in a bowl.</li>
+			<li>Remove biscuits from package and separate.</li>
+			<li>If you want the maple-bourbon glaze:  melt the butter in a saucepan and slowly mix in the other ingredients, maple syrup, bourbon, and powdered sugar.</li>
+			<li>If you're making jelly-filled donuts, skip this step.  To make regular donuts, put a 1/2" hole in the middle of the biscuit and gently place in the oil, making sure to flip until golden brown on both sides.</li>
+			<li>Remove from oil and place on a paper towel/wire rack.  Once the donut is no longer dripping, take this opportunity to briefly toss it in the cinnamon-sugar bowl on both sides or in the maple-bourbon glaze on one side.  OR, poke a hole in the donut with the spout of the squeeze bottle and squeeze in the jelly, & top the donut with some powdered sugar.</li>
+		</ol>w
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

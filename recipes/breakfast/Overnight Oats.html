@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>Overnight Oats</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://cleanfoodcrush.com/wp-content/uploads/2018/12/CleanFoodCrush-Overnight-Oats-4-Ways.jpg"></td>
+			<td><h1>Overnight Oats</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 5 minutes</p></td>
+				<td><p>Total time: 5 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="1" step="1" onchange="recipe.adjustIngredients(this.value/1)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Easy, sweet, and best served chilled.  This is the perfect breakfast food that keeps you full.  Can also be personalized by adding dried fruit, peanut butter, nuts, etcetera.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> rolled oats</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> almond/soy milk</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="ounce">2 ounces</span> Greek yogurt</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> chia seeds</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="ounce">1 ounce</span> honey or maple syrup</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="teaspoon">1/4 teaspoon</span> vanilla extract</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Throw all that shit in a jar.  Wait overnight.  Done.</li>
+		</ol>
+
+		<h2>Options</h2>
+			<p>Peanut Butter & Jelly</p>
+			<ul>
+				<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> strawberry jam</li>
+				<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> peanut butter</li>
+				<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> strawberries, diced</li>
+				<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> peanuts, crushed</li>
+			</ul>
+
+			<p>Apple Pie</p>
+			<ul>
+				<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> apples, diced</li>
+				<li><span class="ingredient" data-quantity="1" data-unit="tablespoon"> 1 tablespoon</span> pecans, chopped</li>
+				<li><span class="ingredient" data-quantity="2" data-unit="teaspoons">2 teaspoons</span> maple syrup</li>
+				<li><span class="ingredient" data-quantity="1/4" data-unit="teaspoon">1/4 teaspoons</span> ground cinnamon</li>
+			</ul>
+
+			<p>Banana Nutella</p>
+			<ul>
+				<li><span class="ingredient" data-quantity="1/2" data-unit="banana">1/2 banana</span>, sliced</li>
+				<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> Nutella</li>
+				<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> hazelnuts, crushed</li>
+				<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> chocolate chips</li>
+			</ul>
+
+			<p>Almond Joy</p>
+			<ul>
+				<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> coconut, shredded</li>
+				<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> almonds, chopped</li>
+				<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> chocolate chips</li>
+				<li><span class="ingredient" data-quantity="2" data-unit="teaspoons">2 teaspoons</span> maple syrup</li>
+			</ul>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

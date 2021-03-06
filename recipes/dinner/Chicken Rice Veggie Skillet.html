@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Chicken, Rice, and Veggie Skillet</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.averiecooks.com/wp-content/uploads/2019/01/chickenriceveg-6-360x360.jpg"></td>
+			<td><h1>Chicken, Rice, and Veggie Skillet</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 15 minutes</p></td>
+				<td><p>Total time: 45 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="4" step="1" onchange="recipe.adjustIngredients(this.value/4)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>A skillet of fried rice, vegetables, and chicken breast.  Very easy to make, just make sure to <b>precook</b> the necessary rice.  Cooked rice : Raw rice, 3:1</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="4" data-unit="ounce">4 ounces</span> olive oil</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="pound">1 pound</span> chicken breast, diced</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> onion, yellow diced</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="clove">3 cloves</span> garlic, minced</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> bell pepper, red medium diced</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="head">1 head</span> broccoli, florets</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="cup">3 cups</span> rice, white cooked</li>
+			
+			<p>For garnish</p>
+			<li><span class="ingredient" data-quantity="3" data-unit="">3</span> onions, green sliced</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>To a large skillet, add the onion and garlic to olive oil.  Cook until translucent, 5 minutes.</li>
+			<li>Add red bell peppers and chicken, cook for 5 minutes or until the chicken is cooked all the way.</li>
+			<li>Add rice, broccoli, and water.  Then season with paprika, salt, and pepper.  Cook covered until the broccoli is tender.</li>
+			<li>Serve and sprinkly with green onions.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

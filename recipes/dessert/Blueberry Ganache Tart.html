@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Blueberry Ganache Tart</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.theminichef.com/wp-content/uploads/2020/05/blueberry-ganache-tart-4-800x530.jpg"></td>
+			<td><h1>Blueberry Ganache Tart</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 2 hours</p></td>
+				<td><p>Total time: 2 hours 15 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="4" step="1" onchange="recipe.adjustIngredients(this.value/4)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Not only is this tart strikingly beautiful, but it has a perfectly balanced flavor as well. The tartness of the blueberries complements the sweetness of the white chocolate to create a completely unique ganache filling.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<p>Tart Crust</p>
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> all-purpose flour</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> powdered sugar</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="pinch">1 pinch</span> table salt</li>
+			<li><span class="ingredient" data-quantity="9" data-unit="tablespoon">9 tablespoons</span> cold butter</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="">2</span> eggs, yolk</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> vanilla extract</li>
+			
+			<p>Blueberry Ganache</p>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> blueberries, fresh</li>
+			<li><span class="ingredient" data-quantity="6" data-unit="tablespoon">6 tablespoons</span> heavy cream</li>
+			<li><span class="ingredient" data-quantity="12" data-unit="tablespoon">12 tablespoons</span> white chocolate chips</li>
+			
+			<p>Equipment</p>
+			<li>4-inch tart tins</li>
+			<li>Large mixing bowl</li>
+			<li>Mesh sieve</li>
+			<li>Pastry cutter (or 2 forks)</li>
+			<li>Silicone spatula</li>
+			<li>Rolling pin</li>
+			<li>Pie weights (dry rice or beans work as well)</li>
+			<li>Small pot</li>
+			<li>Whisk</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<p>Tart Crust</p>
+			<li>Sift flour, powdered sugar, and a pinch of salt together into a large mixing bowl.</li>
+			<li>Cut the butter into small 1/2 inch cubes, and add to the dry ingredients. Using the pastry cutter, cut the butter into the flour mixture until it resembles course cornmeal.</li>
+			<li>Add egg yolks and vanilla extract. Using the spatula, mix the ingredients until they just combine.</li>
+			<li>Use your hands to shape the dough into a ball. Cut the dough in half, as it will make it easier to roll out later, and wrap each ball with saran wrap and chill in the fridge for at least an hour.</li>
+			<li>Take out one ball of dough and roll it into a round shape until it’s about 1/4 inch thick. Usually, I divide the ball in half again since that makes it easier to roll into a nice even thickness.</li>
+			<li>Gently drape the rolled out dough into the tart tin and lightly press the dough into the sides. Make sure to fit the dough closely tightly in the mold so there is no gap between the dough and the tin. Be careful not to stretch the dough while doing this, as it will cause the crust to shrink while it bakes.</li>
+			<li>To remove the excess dough from the tin, roll over the top of the tin with the rolling pin. Then, use a fork to gently poke the bottoms of the tart crust, making sure not to poke a hole all the way through.</li>
+			<li>Repeat steps 5 through 7 with the other half of the dough in the fridge.</li>
+			<li>Chill the tart tins in the fridge for another 15 minutes. In the meantime, preheat the oven to 375°.</li>
+			<li>After you take the tarts out again, line the dough with aluminum foil and weigh them down with pie weights.</li>
+			<li>Bake for 10 minutes, then remove the aluminum foil and pie weights. Bake for another 5 minutes, until the crust is golden brown.</li>
+			<li>Let the tart crusts cool before filling with ganache.</li>
+
+		<p>Blueberry Ganache</p>
+			<li>While the tart is baking in the oven, put blueberries in a small pot and smash with a whisk or fork until none of them are still whole.</li>
+			<li>Add heavy cream and warm up over low heat. Keep squishing the blueberries until they lose all shape, and the mixture looks purple. This should take about 10 minutes. Turn off the heat when you start to see bubbles forming.</li>
+			<li>In a small bowl, add white chocolate chips. Pour the hot mixture in through a mesh sieve to remove the blueberries and whisk together until it becomes smooth.</li>
+			<li>Let ganache cool to room temperature before pouring into the crusts.</li>
+
+		<p>Assemble</p>
+			<li>When both the crusts and ganache have cooled, carefully spoon the ganache into the crusts.</li>
+			<li>Place the assembled tarts in the freezer for at least 3 hours (or overnight) to let the ganache set a bit.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Coffee Cake in a Mug</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://myfridgefood.com/Media/Recipe/1339002203monstertoes.jpg"></td>
+			<td><h1>Coffee Cake in a Mug</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 5 minutes</p></td>
+				<td><p>Total time: 5 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="1" step="1" onchange="recipe.adjustIngredients(this.value/1)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p></p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<p>Batter</p>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> butter</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> sugar</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> applesauce</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="drop">2 drops</span> vanilla extract</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> all-purpose flour</li>
+			<li><span class="ingredient" data-quantity="1/8" data-unit="teaspoon">1/8 teaspoon</span> baking powder</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="teaspoon">1/4 teaspoon</span> salt</li>
+			
+			<p>Struesel</p>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> butter</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> flour</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> brown sugar</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="teaspoon">1/4 teaspoon</span> ground cinnamon</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>In a mug soften 1 tbsp of butter in microwave, about 5 seconds. You dont want it melted, just soft. Stir in 2 tbsp of sugar and mix until well incorporated. Stir in applesauce, vanilla (just a tiny bit, were talking drops), flour, baking powder, and pinch of salt; stirring until just combined. Use the back of your spoon to smooth it out in the bottom of the mug.</li>
+			<li>Want struesel? Of course you do! In a separate, small bowl, combine 1 tbsp of butter, 2 tbsp of flour, 1 tbsp of brown sugar, and 1/4 tsp cinnamon. Use your fingers to to pinch the butter and mix it in with the other ingredients. When it starts to look like lumpy sand (appetizing, eh?) and all ingredients are combined, pour on top of cake batter in mug.</li>
+			<li>Cook in the microwave for 50-80 seconds depending on your microwave. At 1 minute, my microwave cooks it perfectly. It will look just barely set on top. You dont want to overcook it and things tend to get ugly fast in the microwave. I suggest cooking it 50 seconds, and then in 10 second intervals checking after each interval until done. Eat white its still warm. Once it cools off, it tends to loose some of its magic!</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

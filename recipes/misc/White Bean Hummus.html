@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>White Bean Hummus</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://sweetpeasandsaffron.com/wp-content/uploads/2014/09/hummus_-2.jpg"></td>
+			<td><h1>White Bean Hummus</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 15 minutes</p></td>
+				<td><p>Total time: 20 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="6" step="1" onchange="recipe.adjustIngredients(this.value/6)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Is it hummus or just a bean dip? Without any tahini, it might not technically still be a hummus but just a plain bean dip. But whatever you want to call it, it's high in protein, high in fiber and can be used for anything you use hummus or bean dip for. Try it as a vegetarian sandwich spread in place of a less-healthy mayonnaise (hummus works particularly well in wrap sandwiches since it holds together well and doesn't drip), or, use it like hummus as a dip for pita, toast points or veggies.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> olive oil</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="clove">3 cloves</span> garlic, chopped</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="can">2 cans</span> Great Northern Beans, 15.8oz cans</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> lemon juice</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoon</span> ground cumin</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> fresh parsley, chopped</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="tablespoon">1/2 tablespoon</span> kosher salt</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoon</span> white pepper</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="pinch">1 pinch</span> cayenne or paprika</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>In a small saucepan, combine the olive oil and garlic over medium to low heat until the garlic is very lightly browned, being careful not to burn. Let cool slightly and strain, reserving both the oil and the garlic.</li>
+			<li>Place the white beans in a food processor or blender, and add the garlic, lemon juice, cumin, and parsley. Process until smooth. Carefully pour in the reserved olive oil while the food processor or blender is running and process until light and smooth.</li>
+			<li>Season your white bean hummus with salt (sea salt or kosher salt is almost always best), white pepper and a touch of cayenne pepper or paprika for a colorful garnish.</li>
+			<li>Serve cool with pita bread, bagel chips or tortilla chips or an array of freshly chopped vegetables—baby carrots or carrot sticks, celery sticks, bell pepper slices, sliced mushrooms or jicama slices.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

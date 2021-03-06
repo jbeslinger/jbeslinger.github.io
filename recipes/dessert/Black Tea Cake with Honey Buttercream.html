@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>Black Tea Cake with Honey Buttercream</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://images.squarespace-cdn.com/content/v1/539cc3c1e4b045b6dc9898db/1517632715072-JYWYHJVUGK767WUC48SB/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/image-asset.jpeg?format=750w"></td>
+			<td><h1>Black Tea Cake with Honey Buttercream</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time:  minutes</p></td>
+				<td><p>Total time:  minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Makes <input type="number" min="0" value="1" step="1" onchange="recipe.adjustIngredients(this.value/1)"> 9" cake(s) or twice as many 5" cakes</p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Black Tea Cake with Honey Buttercream is a cup of tea turned into a slice of cake. The black tea cake is made by pouring the contents of three tea bags into warmed milk and allowing it to brew before adding the milk into the cake batter, tea leaves and all. The batter takes on a wonderful color, with specks of tea leaves to add a unique twist. After baking, the cake is topped with a honey buttercream that keeps the flavor without so much of the sweetness. The cake and buttercream taste just as their namesake, giving the classic cup of tea a new life. Tea lovers, this cake is just for you.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<p>For the cake</p>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 cup</span> milk</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">3 tablespoons</span> black tea (or the contents of 3 tea bags)</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1/4 cup</span> butter, room temperature</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 cup</span> granulated sugar</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">2</span> eggs, large</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1/4 cup</span> vegetable oil</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 teaspoon</span> vanilla extract</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 3/4 cups</span> cake flour</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 1/2 teaspoons</span> baking powder</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1/2 teaspoon</span> baking soda</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1/2 teaspoon</span> salt</li>
+
+			<p>For the honey buttercream</p>
+			<li><span class="ingredient" data-quantity="" data-unit="">1/2 cup</span> butter, room temperature</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">3 tablespoons</span> honey</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">2 cups</span> powdered sugar</li>
+			<li>Pinch of salt</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<p>For the cake</p>
+			<li>Preheat oven to 350 degrees F (180 degrees C). Grease a 9-inch round cake pan.</li>
+			<li>Warm the milk until near boiling on the stove or in the microwave. Cut open the tea bags and add the tea directly into the milk. Allow to cool.</li>
+			<li>In a large mixing bowl, cream together the butter and sugar until light and fluffy. Add the eggs one at a time, beating well after each addition. Beat in the vegetable oil and vanilla extract. Gradually add in the cake flour, baking powder, baking soda, and salt. Stir in the tea brewed milk, mixing until batter is uniform and smooth.</li>
+			<li>Transfer batter to prepared pan and bake for 30-40 minutes (18-22 minutes for cupcakes), or until a toothpick inserted into the center comes out clean. Remove from the oven and allow to cool before frosting or serving.</li>
+			
+			<p>For the honey buttercream</p>
+			<li>In a large mixing bowl, beat the butter and honey until smooth. Add the powdered sugar and salt and continue mixing until the frosting comes together. If the frosting is too runny, add more powdered sugar until it reaches the right consistency. Likewise, if the frosting is too stiff, add more honey (or a splash of milk) to thin it out. If the frosting is too sweet, add a pinch more salt until the desired sweetness is achieved.</li>
+			<li>Spread or pipe the honey buttercream onto the cooled cake and serve.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

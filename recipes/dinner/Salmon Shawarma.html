@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>Salmon Shawarma</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="http://s2.grouprecipes.com/images/recipes/200/2702849037.jpg"></td>
+			<td><h1>Salmon Shawarma</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 45 minutes</p></td>
+				<td><p>Total time: 2 hours 45 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="8" step="1" onchange="recipe.adjustIngredients(this.value/8)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>An attempt to make shawarma from cabinet goodies.  We'll see how well this goes.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<p>For the salmon</p>
+			<li><span class="ingredient" data-quantity="8" data-unit="piece">8 pieces</span> thawed salmon filets</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="cup">2 cups</span> plain greek yogurt</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> onion, yellow, diced</li>
+			<li><span class="ingredient" data-quantity="4" data-unit="clove">4 cloves</span> garlic, minced</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> olive oil</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> white vinegar</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> curry powder</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> ground cinnamon</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> ground cloves</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> ground ginger</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> dried mint</li>
+			<li>Ground kosher salt to taste</li>
+			<li>Fresh ground black pepper to taste</li>
+
+			<p>For the yogurt sauce</p>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> plain yogurt</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> lime juice</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> tahini (optional)</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="clove">3 cloves</span> garlic, minced</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> fresh dill, chopped</li>
+			<li><span class="ingredient" data-quantity="5" data-unit="leaf">5 leafs</span> mint (optional)</li>
+			<li>Ground kosher salt to taste</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<p>For salmon</p>
+			<li>Mix all ingredients <i>(minus the salt)</i> in a large bowl and set in fridge for a couple hours to overnight.</li>
+			<li>When it's ready, preheat oven to 400° and pour mixture in baking dish.  Spread to about 1" thickness.</li>
+			<li>Bake for 45 minutes or so, aiming to dry out the mixture slightly.</li>
+			<li>Once the mixture comes together, sprinkle generously with salt and bake until it's dried up to your liking.</li>
+
+			<p>For yogurt sauce</p>
+			<li>Blend in a food processor until light and fluffy.  Store up to 2 weeks.</li>
+		</ol>
+		<ul>
+			<p>Serving suggestions</p>
+			<li>Stuff into pita bread with romaine salad mixture.  Optionally, you can quarter cherry tomatoes & slice cucumber and place those in the wrap with it.  Drizzle the yogurt sauce over the salad.</li>
+		</ul>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

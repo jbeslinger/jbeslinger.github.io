@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Beef Curry</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/beef-curry-711a4c1.jpg"></td>
+			<td><h1>Beef Curry</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 15 minutes</p></td>
+				<td><p>Total time: 2 hours</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="4" step="1" onchange="recipe.adjustIngredients(this.value/4)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Flavorful and hearty, this is comfort food at its most delicious and soul nourishing. The spices aid in digestion and are anti-inflammatory and warming. Feel free to adjust the vegetables to include what’s in season or what you like. There are endless possibilities here! The curry also gets better with age, so feel free to make it a day or two ahead of time.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="" data-unit="">1 teaspoon</span> cumin seed</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1/2 teaspoon</span> coriander seed</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1/2 teaspoon</span> whole black peppercorns</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1</span> chile, red dried</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1</span> piece ginger, 1" peeled and minced</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">4</span> cloves garlic, minced</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1</span> shallot, large minced</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">2 teaspoons</span> avocado oil</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 1/2 cups</span> full-fat unsweetened coconut milk</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 1/2 pounds</span> grass-fed beef stew meat</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">2</span> peppers red bell, stemmed, seeded, and cut into large chunks</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 cup</span> chicken stock</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1</span> head broccoli, cut into small florets</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1/4 cup</span> fish sauce</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 cup</span> basil leaves, torn into small pieces</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>In a small sauté pan over medium-high heat, cook the cumin, coriander, black pepper, and red chile just until the mixture begins to turn brown, 2 to 3 minutes. Remove from the heat, and, using a mortar and pestle or spice grinder, grind the mixture into a powder. Add the ginger, garlic, and shallot and blend until the mixture forms a paste. If you don’t have a mortar and pestle, use a small food processor or blender to make the paste.</li>
+			<li>Heat the avocado oil in a 5-quart Dutch oven over medium-high heat until shimmering. Add the spice paste, stir well, and cook until fragrant, about 2 minutes. Pour in the coconut milk and bring to a simmer. Add the beef and red bell pepper, along with the chicken stock. Bring to a simmer and then reduce the heat to medium, partially cover, and simmer until the beef is tender, about 1½ hours.</li>
+			<li>Stir in the broccoli and fish sauce, cover again, and allow the broccoli to steam until tender, about 10 more minutes.</li>
+			<li>Divide among 4 bowls, top with the basil leaves, and serve.</li>
+			<li>The curry gets better after sitting for a day or two, so store in an airtight container in the refrigerator until ready to serve, and consume within 5 to 6 days.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

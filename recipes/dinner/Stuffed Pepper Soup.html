@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Stuffed Pepper Soup</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://spicysouthernkitchen.com/wp-content/uploads/stuffed-pepper-soup-10.jpg"></td>
+			<td><h1>Stuffed Pepper Soup</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 35 minutes</p></td>
+				<td><p>Total time: 45 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="6" step="1" onchange="recipe.adjustIngredients(this.value/6)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Stuffed pepper soup has lots of good stuff:  bell peppers, ground beef, tomatoes, rice.  All in one hearty bowl of soup!</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="3" data-unit="cup">3 cups</span> brown rice, precooked</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="pound">1 pound</span> lean ground beef, precooked</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> green bell pepper, chopped</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> red bell pepper, chopped</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> onion, white diced</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="clove">3 cloves</span> garlic, chopped</li>
+			<li><span class="ingredient" data-quantity="29" data-unit="ounce">29 ounces</span> tomatoes, diced</li>
+			<li><span class="ingredient" data-quantity="14" data-unit="ounce">14 ounces</span> tomato sauce</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="cup">2 cups</span> reduced sodium chicken broth</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> oregano</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Cook the ground beef until brown (5-8 minutes).  Drain the fat.</li>
+			<li>Add peppers, onions, and garlic.  Cook for 4-5 minutes.</li>
+			<li>Add tomatoes, tomato sauce, broth, oregano, and salt + pepper.  Cover and simmer on low for 30 minutes.</li>
+			<li>Serve on top of 1/2 cup cooked brown rice.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

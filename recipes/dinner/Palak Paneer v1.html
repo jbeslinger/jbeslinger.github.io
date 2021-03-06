@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Palak Paneer</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://spicecravings.com/wp-content/uploads/2017/08/Palak-Paneer-5-500x500.jpg"></td>
+			<td><h1>Palak Paneer</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 25 minutes</p></td>
+				<td><p>Total time: 35 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="4" step="1" onchange="recipe.adjustIngredients(this.value/4)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>One of the great Indian curry dishes.  Full of dark green spinach, creamy, and delicious.  Only problems:  it's a little time-consuming, paneer is impossible to find, & I modified the recipe before I made it again.  Best of luck.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<p>For the sauce</p>
+			<li><span class="ingredient" data-quantity="2" data-unit="bunch">2 bunches</span> spinach, roughly chopped</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="bunch">1 bunch</span> fenugreek leaves (kasoori methi), roughly chopped</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> canola oil (or olive oil/ghee)</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> onion, red, chopped</li>
+			<li><span class="ingredient" data-quantity="14 1/2" data-unit="ounce">14 1/2 ounces</span> tomato sauce</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="clove">2 cloves</span> garlic, minced</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> garam masala</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> fresh ginger, grated</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoon</span> chili powder</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoon</span> cayenne powder</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> ground cumin</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> low-fat yogurt (plain Greek)</li>
+
+			<p>For the paneer</p>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="pound">1/2 pound</span> paneer, cubed</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> canola oil (or olive oil/ghee)</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<p>For the sauce</p>
+			<li>Bring a pot of water to boil.  Add spinach & fenugreek to water until wilted.  Drain and set aside.</li>
+			<li>In a blender, process half the leaves until coarse pureed.  Rough chop the remaining half and set aside.</li>
+			<li>In a heavy-bottom skillet, heat oil and add paneer cubes.  Fry until light brown and crispy on most sides.  Remove on paper towel and set aside.</li>
+			<li>In the same pan, add more oil and fry the onions/garlic on medium heat until translucent (10 minutes).</li>
+			<li>While this is cooking, mix together the dry spices in a separate bowl.</li>
+			<li>Combine the onions/garlic with the dry spices and tomato sauce.  Let simmer for 10 more minutes, covered.</li>
+			<li>Add in the coarse pureed spinach, the chopped spinach and paneer and let cook for 5-10 minutes covered.</li>
+			<li>Put the yogurt into a separate bowl.  Stirring continuously, add 1/4 cup at a time of the spinach sauce to the yogurt until you've double the volume of the yogurt (tempering the yogurt to prevent curdling).</li>
+			<li>Put it all back into the skillet & let simmer for 10-15 minutes. Keep the heat low here — not a rolling boil.  The spinach will darken here.</li>
+			<li>Salt and pepper to taste.</li>
+
+			<p>For the rice</p>
+			<li>Place the rice into a bowl, and cover with cold tap water.  Mix with your fingers until the water is cloudy.  Strain and repeat several more times.</li>
+			<li>Place the rice into the rice cooker with butter and bottled water.  The ratio of water to rice is 2:1.</li>
+			<li>When the rice cooker paddle lifts up, indicating done-ness, let the rice cooker sit, unplugged, and steaming for 10 more minutes.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>
