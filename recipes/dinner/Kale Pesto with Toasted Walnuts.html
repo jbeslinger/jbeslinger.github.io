@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Kale Pesto with Toasted Walnuts</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://assets.bonappetit.com/photos/57ae1472f1c801a1038bcf81/master/pass/kale-and-walnut-pesto.jpg"></td>
+			<td><h1>Kale Pesto with Toasted Walnuts</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 10 minutes</p></td>
+				<td><p>Total time: 10 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="8" step="1" onchange="recipe.adjustIngredients(this.value/8)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Chock full of folate, this pesto will give you great sleep and lots of serotonin in the morning.  Besides, being cheap, this pesto is super delicious on pasta or brushed on grilled chicken.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="2" data-unit="cup">2 cups</span> kale leaves, packed</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> basil leaves, packed</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> olive oil</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cups</span> walnuts, chopped, toasted</li>
+			<li><span class="ingredient" data-quantity="4" data-unit="clove">4 cloves</span> garlic</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> parmesan cheese, grated</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>In a food processor, combine kale, basil, and salt.  Pulse 10-12 times or until the leaves are finely chopped.</li>
+			<li>With the motor running, drizzle in olive oil.  Scrape down the sides of the processor.</li>
+			<li>Add the walnuts and garlic & process again.  Then add the cheese.</li>
+			<li>Toss with your favorite pasta and serve immediately.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

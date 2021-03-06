@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Ambrosia Salad</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/2/22/0/EA1113H_ambrosia_s4x3.jpg.rend.hgtvcom.826.620.suffix/1371606303564.jpeg"></td>
+			<td><h1>Ambrosia Salad</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 10 minutes</p></td>
+				<td><p>Total time: 70 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="12" step="1" onchange="recipe.adjustIngredients(this.value/12)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Ambrosia salad is a staple side dish that's been around for years.  Easy to make, crowd-pleaser.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="3/4" data-unit="cup">3/4 cup</span> heavy cream, chilled</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> powdered sugar</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> vanilla extract</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> sour cream</li>
+			<li><span class="ingredient" data-quantity="4" data-unit="cups">4 cups</span> mini marshmallows, plain or fruity</li>
+			<li><span class="ingredient" data-quantity="1 1/2" data-unit="cup">1 1/2 cups</span> shredded coconut, sweetened</li>
+			<li><span class="ingredient" data-quantity="11" data-unit="ounce">11 ounces</span> mandarin oranges, drained</li>
+			<li><span class="ingredient" data-quantity="3/4" data-unit="cup">3/4 cup</span> maraschino cherries, stems removed</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> pineapple tidbits, drained</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>In a medium sized bowl, combine the cream, sugar, and vanilla extract.  Use an electric mixer on high speed until stiff peaks have formed.  Like Cool Whip.</li>
+			<li>Add sour cream and stir until combied.</li>
+			<li>In a separate, large bowl, combine marshmallows, coconut, oranges, cherries, and pineapple.  Stir.</li>
+			<li>Pour the cream mixture over ingredients and stir until well combined.</li>
+			<li>Cover and refrigerate at least one hour before serving.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

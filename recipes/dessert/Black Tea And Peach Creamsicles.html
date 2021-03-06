@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Black Tea And Peach Creamsicles</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.hummingbirdhigh.com/wp-content/uploads/2017/08/9D3A5865-500x666.jpg"></td>
+			<td><h1>Black Tea And Peach Creamsicles</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 10 minutes</p></td>
+				<td><p>Total time: 10 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Makes <input type="number" min="0" value="6" step="1" onchange="recipe.adjustIngredients(this.value/6)"> popsicles</p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p></p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="" data-unit="">1 1/2 cups</span> boiling water</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">2</span> bags Pure Leaf Iced Black Tea with Peach Flavor</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1</span> peach, medium pitted and roughly cut into 1-inch chunks</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1/2 cup</span> plain Greek yogurt</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1/4 cup</span> heavy cream</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">3 tablespoons</span> honey</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>In a large liquid measuring cup, combine 1 1/2 cups boiling water and 2 Pure Leaf Iced Black Tea with Peach Flavor pyramid tea bags. Steep for 15 minutes, before discarding the tea bags. Carefully pour around 2 ounces of the tea into 6 popsicle molds. Drop a few peach chunks into each popsicle mold and transfer to the freezer to freeze for at least 3 hours to set.</li>
+			<li>Once the tea layer has frozen, make the cream base. In a medium bowl, whisk together 1/2 cup Greek yogurt, 1/4 cup heavy cream, 3 tablespoons honey, and remaining peach chunks. Divide evenly between the 6 popsicle molds and transfer to the freezer to set for at least 5 hours, preferably overnight.</li>
+			<li>To serve, unmold each popsicle by dipping quickly in a tall glass of boiling water. Serve and enjoy immediately.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

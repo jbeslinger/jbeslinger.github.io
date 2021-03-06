@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Homemade Subway Bread</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.blessthismessplease.com/wp-content/uploads/2013/12/homemade-subway-150x150.jpg"></td>
+			<td><h1>Homemade Subway Bread</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 15 minutes</p></td>
+				<td><p>Total time: 1 hour 15 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Makes <input type="number" min="0" value="4" step="1" onchange="recipe.adjustIngredients(this.value/4)"> 9-inch sub buns</p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Perfect homemade Subway bread recipe, just like the restaurant. This recipe makes a perfect copycat loaf of Subway bread for sandwiches at home.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> warm water (like, 105°-110°)</li>
+			<li><span class="ingredient" data-quantity="1 1/2" data-unit="tablespoon">1 1/2 tablespoons</span> yeast</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> sugar</li>
+			<li><span class="ingredient" data-quantity="1 1/2" data-unit="teaspoon">1 1/2 teaspoons</span> salt</li>
+			<li><span class="ingredient" data-quantity="4" data-unit="tablespoon">4 tablespoons</span> olive oil</li>
+			<li><span class="ingredient" data-quantity="2 1/2" data-unit="cup">2 1/2 cups</span> all-purpose flour</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>In the bowl of your stand mixer, add the water, yeast, sugar, salt, and olive oil. Let the mixture stand for 5 minutes.</li>
+			<li>Add 1 cup of flour and mix with the dough hook for 3 to 5 minutes. Add an additional cup of flour and mix until well combined. Continue adding the flour, 1/4 cup at a time, until a soft dough is formed. The dough should still stick to the bottom of of the bowl, but pull away from the sides. Let the dough mix for around 8 minutes total.</li>
+			<li>When the dough has come together but is still sticking a bit to the bottom of the bowl, turn it out onto a lightly floured surface and knead until smooth. The dough should be very soft. Shape the dough into a ball and return it to the bowl. Cover the bowl with plastic wrap and allow the dough to rise for a half hour.</li>
+			<li>After the dough has risen, turn it out onto a clean surface and divide it into 4. Roll each piece of dough into a long skinny loaf that is about 9 to 10 inches long.</li>
+			<li>Place the rolled loaves onto a baking sheet lined with parchment or a baking mat. Repeat with the rest of the dough. Allow at least 2 inches between each loaf on the pan.</li>
+			<li>Cover the loaves with a greased piece of plastic wrap and allow the loaves to rise until doubled, about an hour.</li>
+			<li>Towards the end of the rising time, preheat the oven to 350 degrees. When the loaves are ready, bake them in the preheated oven for 25 minutes.</li>
+			<li>When the loaves come out of the oven, rub the tops with a stick of butter and cover them with a dish towel to cool.</li>
+			<li>Let the loaves cool for at least 30 minutes before cutting down the middle and topping with your favorite sandwich fixings.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

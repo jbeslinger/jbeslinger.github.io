@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>High-Protein Flamin' Hot Cheetos</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://images-na.ssl-images-amazon.com/images/I/91hwNwWTkHL._SL1500_.jpg"></td>
+			<td><h1>High-Protein Flamin' Hot Cheetos</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 10 minutes</p></td>
+				<td><p>Total time: 20 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="6" step="1" onchange="recipe.adjustIngredients(this.value/6)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Not nearly as artery-cloggin' good as normal cheetohs, but deliciously fiery in their own way.  And jam-packed with protein.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="6" data-unit="serving">6 servings</span> liquid egg whites, room temp</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="teaspoon">1/4 teaspoon</span> Cream of Tartar</li>
+			<li><span class="ingredient" data-quantity="5" data-unit="drop">5 drops</span> red food coloring</li>
+			<li><span class="ingredient" data-quantity="36" data-unit="gram">36 grams</span> cheddar cheese powder</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="teaspoon">2 teaspoons</span> paprika</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="teaspoon">2 teaspoons</span> cayenne pepper</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoons</span> onion powder</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoons</span> garlic powder</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Preheat oven to 350 and line a baking sheet with foil and cooking spray.</li>
+			<li>Using a hand mixer, mix the egg whites and cream of tartar on high for a few minutes or until your whites form stiff peaks.</li>
+			<li>Add your red food coloring and mix a few more seconds until uniform.</li>
+			<li>Line a large bowl with your cheese powder and spices.</li>
+			<li>Using a piping bag, create long, red, Cheeto shaped egg whites onto your cheese mixture.  The thinner, the crispier.  You can make puffs by making them larger, just be wary of burning before the inside is fully cooked.</li>
+			<li>Once your Cheetos are in the cheese, spoon the spices on top to fully spice each Cheeto.</li>
+			<li>Place the finished Cheetos onto your baking sheet.  If they're having trouble sticking together, your egg whites weren't stiff enough.</li>
+			<li>Bake your Cheetos for 10-12 minutes.  Spraying a tiny bit of cooking spray on top before baking will reducing the scorching of spices.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

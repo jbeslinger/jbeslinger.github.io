@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Cereal and Fruit</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://previews.123rf.com/images/bigacis/bigacis1608/bigacis160800008/61085523-bowl-of-whole-grain-cheerios-cereal-isolated-on-white-background.jpg"></td>
+			<td><h1>Cereal and Fruit</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 5 minutes</p></td>
+				<td><p>Total time: 5 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="1" step="1" onchange="recipe.adjustIngredients(this.value/1)"></p></td>
+			</tr>
+		</table>
+		
+		<p>A simple breakfast meal made of a bowl of cereal, a piece of fruit, and two slices of buttered toast.  Good repleacement options for butter spread are margarine, olive oil, avocado, and cottage cheese.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="8" data-unit="ounce">8 ounces</span> Cheerios</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> almond/soy milk</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> apple or banana</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="slice">2 slices</span> whole wheat bread</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> butter (or butter substitute)</li>
+		</ul>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

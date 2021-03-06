@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Creamy Brussels Sprouts Gratin</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.eatwell101.com/wp-content/uploads/2017/11/Brussels-Sprouts-Gratin.jpg"></td>
+			<td><h1>Creamy Brussels Sprouts Gratin</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 5 minutes</p></td>
+				<td><p>Total time: 30 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="4" step="1" onchange="recipe.adjustIngredients(this.value/4)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>This easy and luxurious gratin is absolutely delicious! Parmesan and crisp-tender brussels sprouts all baked in a creamy sauce will turn everyone at the table into Brussels sprout addicts.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="1" data-unit="pound">1 pound</span> brussel sprouts, trimmed and halved</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> unsalted butter</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="clove">3 cloves</span> garlic, minced</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="">1/2</span> onion, minced</li>
+			<li>Kosher salt & freshly ground pepper to taste</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoon</span> Italian seasoning</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> red chili pepper flakes</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="teaspoon">2 teaspoons</span> cornstarch</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> low sodium vegetable broth (or chicken)</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> heavy cream</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> parmesan cheese</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Preheat oven to 400°. Bring a large pot of salted water to a boil. Add the Brussels sprouts and cook for 6-8 minutes. Drain the Brussels sprouts and set aside for later.</li>
+			<li>In a cast iron skillet (or any oven proof skillet), heat 1 tablespoon butter and fry garlic and onion with Italian seasoning and red chili pepper flakes over medium heat until fragrant, 1 or 2 minutes. Whisk in 2 teaspoons cornstarch (or flour) until fully incorporated.</li>
+			<li>Stir in broth in the skillet and mix until the sauce thickens a bit. Pour cream over and whisk until smooth. Season with salt and pepper to taste, then spread out Brussels sprouts evenly into the sauce. Give a quick stir to coat well and sprinkle with Parmesan.</li>
+			<li>Transfer the skillet and bake the gratin until bubbly and golden brown, about 15 minutes.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

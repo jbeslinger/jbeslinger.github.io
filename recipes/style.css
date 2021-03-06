@@ -1,0 +1,55 @@
+html {
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAUdEVYdENyZWF0aW9uIFRpbWUAMy82LzEygrTcTAAAAFRJREFUSIljfPDggZRf5RIGGNjUHsNATz6jXmSL1Kb2GLiAX+USBnrymRgGGDCORgFmoNAXjEbBaBSMRsFoFIxGwWgUjEbBaBSMRsFoFIxGwWgUAABYNujumib3wAAAAABJRU5ErkJggg==');
+	background-color: #9284AB;
+	padding: 24px;
+}
+
+body {
+	padding: 24px;
+	background-color: white;
+	border: solid 1px grey;
+	border-radius: 8px;
+}
+
+img {
+	width: 128px;
+	height: 128px;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+td {
+	padding: 8px;
+}
+
+#searchbox {
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/12px-Vector_search_icon.svg.png");
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	width: 80%;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
+}
+
+#recipeUL {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#recipeUL li a {
+	border: 1px solid #ddd;
+	margin-top: -1px;
+	background-color: #f6f6f6;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	display: block;
+}
+
+#recipeUL li a:hover:not(.header) {
+	background-color: #eee;
+}

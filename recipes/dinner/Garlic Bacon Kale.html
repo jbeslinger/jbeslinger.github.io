@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>Garlic Bacon Kale</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.spendwithpennies.com/wp-content/uploads/2019/04/Garlic-Kale-SpendWithPennies-4-168x168.jpg"></td>
+			<td><h1>Garlic Bacon Kale</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 5 minutes</p></td>
+				<td><p>Total time: 20 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input id="serves" type="number" min="0" value="4" step="1" onchange="recipe.adjustIngredients(this.value/4);updateCalories();"></p></td>
+				<td><p>Calories: <input id="calories" type="number" min="0" value="" step="50"></p></td>
+				<td><p>Per serving: <input id="per_serving" type="number" min="0" value="48" step="50" onchange="updateCalories();"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p></p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="" data-unit="">3 slices</span> bacon chopped</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1/2 cup</span> onion finely chopped</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 bunch</span> kale washed</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">2 cloves</span> garlic minced</li>
+			<li>Sea salt</li>
+			<li>Freshly ground black pepper</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Cook bacon until crisp over medium heat. Remove bacon and set aside reserving drippings.</li>
+			<li>Reduce heat to medium low and cook onion in the drippings until tender, about 10 minutes.</li>
+			<li>Add kale and garlic stirring until cooked, about 5 minutes.</li>
+			<li>Season with salt and pepper to taste. Sprinkle with bacon and serve.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+    <script>
+    	function updateCalories()
+    	{
+    		var serves = document.getElementById("serves");
+			var calories = document.getElementById("calories");
+			var per_serving = document.getElementById("per_serving");
+			calories.value = per_serving.value * serves.value;
+		}
+		updateCalories();
+	</script>
+</body>
+</html>

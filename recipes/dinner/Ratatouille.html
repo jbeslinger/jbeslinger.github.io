@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>Ratatouille</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://img.buzzfeed.com/video-api-prod/assets/eb44570519264864814264f7f0a5e47a/BFV13909_BakedRatatouille-ThumbTextless1080.jpg"></td>
+			<td><h1>Ratatouille</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 20 minutes</p></td>
+				<td><p>Total time: 80 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input id="serves" type="number" min="0" value="8" step="1" onchange="recipe.adjustIngredients(this.value/8);updateCalories();"></p></td>
+				<td><p>Calories: <input id="calories" type="number" min="0" value="" step="50"></p></td>
+				<td><p>Per serving: <input id="per_serving" type="number" min="0" value="224" step="50" onchange="updateCalories();"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p></p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<p>Vegetables</p>
+			<li><span class="ingredient" data-quantity="2" data-unit="">2</span> eggplants, japanese</li>
+			<li><span class="ingredient" data-quantity="6" data-unit="">6</span> tomatos, roma</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="">2</span> squashes, yellow</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="">2</span> zucchinis</li>
+
+			<p>Sauce</p>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoons">2 tablespoons</span> olive oil</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> onion, diced, yellow</li>
+			<li><span class="ingredient" data-quantity="4" data-unit="clove">4 cloves</span> garlic</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> pepper, red bell, diced</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> pepper, yellow bell, diced</li>
+			<li><span class="ingredient" data-quantity="28" data-unit="ounce">28 ounces</span> crushed tomatoes</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> basil leaves, chopped</li>
+
+			<p>Herb seasoning</p>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> basil leaves, chopped</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoon</span> garlic, minced</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> parsley leaves, chopped</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="teaspoon">2 teaspoons</span> fresh thyme</li>
+			<li><span class="ingredient" data-quantity="4" data-unit="tablespoon">4 tablespoons</span> olive oil</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Preheat oven for 375.</li>
+			<li>Slice the eggplant, tomatoes, squash, and zucchinis into approximately 1mm rounds.  (A mandolin is perfect for this.)  Set aside.</li>
+			<li>Heat the olive oil in a 12-inch, oven-safe pan over medium-high heat.  Sauté the onion, garlic, and bell peppers until soft, about 10 minutes.  Season with salt and pepper, then add the crushed tomatoes.  Stir ingredients until fully incorporated.  Remove from heat and blend for smoothness (optional).</li>
+			<li>Back in the pan, add basil leaves and stir once more.  Then smooth the surface with a spatula.</li>
+			<li>Arrange the sliced veggies in alternating patterns.  (i.e. eggplant, tomato, squash, zucchini.)  Arrange these on top of the sauce from the outer edge to the middle of the pan.  Season with salt and pepper.</li>
+			<li>Cover with foil and bake for 40 minutes.  Uncover and bake for 20 more minutes.</li>
+			<li>Mix herb seasoning together while this is cooking.  Pour the herbs over the cooked ratatouille.</li>
+			<li>Serve hot or reheat the next day in an foil-covered, oven-save recepticle at 350 for 15 minutes.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+    <script>
+    	function updateCalories()
+    	{
+    		var serves = document.getElementById("serves");
+			var calories = document.getElementById("calories");
+			var per_serving = document.getElementById("per_serving");
+			calories.value = per_serving.value * serves.value;
+		}
+		updateCalories();
+	</script>
+</body>
+</html>

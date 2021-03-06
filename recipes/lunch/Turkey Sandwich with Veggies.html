@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Turkey Sandwich and Vegetables</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://images.eatthismuch.com/site_media/img/333061_BrockKlein_7481aaf0-4e64-45dd-b7fb-63ab58ffe0e6.png"></td>
+			<td><h1>Turkey Sandwich and Vegetables</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 5 minutes</p></td>
+				<td><p>Total time: 5 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="1" step="1" onchange="recipe.adjustIngredients(this.value/1)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>A basic lunch plan made of a turkey sandwich, vegetables, nuts, and a fruit.  It covers all of the dietary pyramid. Can be made way in advance.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<p>For the sandwich</p>
+			<li><span class="ingredient" data-quantity="2" data-unit="slice">2 slices</span> whole wheat bread</li>
+			<li><span class="ingredient" data-quantity="4" data-unit="ounces">4 ounces</span> lean turkey, sliced</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="slice">1 slice</span> swiss, or hard cheese</li>
+			
+			<p>To go with</p>
+			<li><span class="ingredient" data-quantity="4" data-unit="ounce">4 ounces</span> baby carrots</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="stalk">1 stalk</span> celery</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> apple sauce, unsweetened</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="ounce">2 ounces</span> mixed nuts, salted</li>
+		</ul>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

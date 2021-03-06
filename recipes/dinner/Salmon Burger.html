@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Salmon Burger</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://i.ytimg.com/vi/BNs86wK0Y9E/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAbAoeOKj3-ILsCOmkGwhJZhONyHA"></td>
+			<td><h1>Salmon Burger</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 30 minutes</p></td>
+				<td><p>Total time: 30 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Makes <input type="number" min="0" value="2" step="1" onchange="recipe.adjustIngredients(this.value/4)"> burgers</p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Looks bloody delicious.  Transcribed from Adam Ragusea's salmon burger recipe.  Salmon fillet burger topped with savory cole slaw.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<p>Salmon Patty</p>
+			<li><span class="ingredient" data-quantity="12" data-unit="ounce">12 ounces</span> salmon fillet meat (no skin)</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> shallot, diced</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="sprig">2 sprigs</span> dill, diced</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="sprig">3 sprigs</span> dill, diced</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> dijon mustard</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="squeeze">1 squeeze</span> lemon juice</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="squeeze">1 squeeze</span> honey</li>
+			<li>Sea salt to taste</li>
+			<li>Freshly ground pepper to taste</li>
+
+			<p>Slaw Topping</p>
+			<li>Bagged pre-cut slaw mix</li>
+			<li>Mayonnaise</li>
+			<li>Vinegar</li>
+			<li>Sugar</li>
+			<li>Sea Salt</li>
+			<li>Celery Seeds</li>
+		</ul>
+
+
+		<h2>Directions</h2>
+		<p>Salmon Burger</p>
+		<ol>
+			<li>Finely chop the shallots and dill and put in a mixing bowl, along with a spoonful of mustard, a squeeze of lemon juice (a teaspoon, max), a small squeeze of honey and a few grinds of pepper.</li>
+			<li>Remove the skin from the salmon, and dice the fish into approx. 1/4 inch (6mm) cubes. Put 2/3 of the fish into the mixing bowl. Chop the remaining third as fine as you can, and grind it into the cutting board with the side of your knife to make a fine paste. Add that to the bowl.</li>
+			<li>Mix everything with just enough breadcrumbs to make it moldable — I use maybe a quarter cup (30g) — and mold into two patties that match the size and shape of your burger buns. (Unlike beef patties, they won't shrink much during cooking.) Season the outside of the patties with salt just prior to cooking.</li>
+			<li>Heat a pan (preferably nonstick) on medium-low heat and melt in some butter. When the butter is just starting to brown, lay in the patties. Cook until the first side is brown and flip. Push on the surface of the burger — when you feel the inside go a little firm, they're done. Usually takes me six minutes, total.</li>
+			<li>Put the patty on the bun and top with slaw (recipe below).</li>
+		</ol>
+
+		<p>Slaw</p>
+		<ol>
+			<li>Mix the veg with a big glug of vinegar and just enough mayo to hold it together. Stir in a big pinch of sugar, a small pinch of sat, some celery seeds (if using) and taste. This is a condiment for a burger, so it should taste too strong on its own. Add more of whatever it needs, and ideally let it sit in the fridge for a few hours (or overnight) before using.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

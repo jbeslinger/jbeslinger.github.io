@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Red Pepper Pesto</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/pasta_6.jpg?itok=1chjJZ95"></td>
+			<td><h1>Red Pepper Pesto</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 15 minutes</p></td>
+				<td><p>Total time: 15 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="4" step="1" onchange="recipe.adjustIngredients(this.value/4)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>A very healthy, red version of pesto that agrees with IBS without passing on any of the stuff that makes pesto taste great.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> pine nuts</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="">3</span> peppers, red bell, roasted, roughly chopped</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> parmesan cheese</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="tablespoon">3 tablespoons</span> olive oil</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="clove">2 cloves</span> garlic, minced</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> basil leaves, packed</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> lactose-free cream (Or one part almond milk + one part canola oil)</li>
+
+			<p>To serve</p>
+			<li>Pasta</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Cook the pasta like normal.  In a separate, <b>dry</b> pan, toast the pine nuts for a few minutes.</li>
+			<li>Add the pine nuts to a food processor along with the red peppers, cheese, oil, basil, and salt + pepper to taste.  Whizz to a paste, adding a splash of starchy, pasta water if it's a little dry.</li>
+			<li>Drain the pasta, reserving a cup of the water.  Add the pesto, pasta water, & lactose-free cream to a low-heat pan.  Stir until the cream has fully incorporated.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Beer Battered Chicken</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://images.media-allrecipes.com/userphotos/1385365.jpg"></td>
+			<td><h1>Beer Battered Chicken</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 30 minutes</p></td>
+				<td><p>Total time: 30 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="6" step="1" onchange="recipe.adjustIngredients(this.value/6)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Easy to make, beer battered, pan fried chicken.  Guaranteed to make your bowels & Long John Silver, himself, cry.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="1 1/2" data-unit="pound">1 1/2 pounds</span> boneless chicken breasts, halved</li>
+			<li><span class="ingredient" data-quantity="1 1/2" data-unit="cup">1 1/2 cups</span> all-purpose flour</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="teaspoon">1 teaspoon</span> baking powder</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="">2</span> eggs, beaten</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> cold beer (the hoppier, the better)</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="cup">3 cups</span> vegetable oil, for frying</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="cup">2 cups</span> stuff</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Rinse chicken and slice into 1 inch strips.  In a medium bowl, mix together flour, salt, pepper, and baking powder.  In another bowl, mix together the eggs and beer.</li>
+			<li>Coat chicken strips in egg wash, then toss them in the flour.  Repeat once more for each strip, only doing a few chicken strips at a time.  Lay the strips on a wire rack to dry for about 10 minutes.</li>
+			<li>While drying, heal the oil in a deep, heavy, pan to 375°.</li>
+			<li>Frying a few at a time to ensure equal cooking, gently lay each strip in the hot oil and fry on both sides until golden brown and internal measures 160°.</li>
+			<li>Remove and place on wire rack to cool.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

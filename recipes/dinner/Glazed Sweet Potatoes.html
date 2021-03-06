@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Glazed Sweet Potatoes</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.tasteofhome.com/wp-content/uploads/2017/10/Glazed-Sweet-Potatoes_EXPS_WRSM17_327_B03_29_4b-1.jpg"></td>
+			<td><h1>Glazed Sweet Potatoes</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 30 minutes</p></td>
+				<td><p>Total time: 60 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="5" step="1" onchange="recipe.adjustIngredients(this.value/5)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>The basic way to cook sweet potatoes.  Not too sugary, and full of good fiber.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="2" data-unit="cup">2 pounds</span> sweet potatoes (or [2] 15oz cans, drained)</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> butter</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> maple syrup</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="cup">1/4 cup</span> brown sugar</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="teaspoon">1/4 teaspoon</span> ground cinnamon</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li><i>If using fresh sweet potatoes: </i> place in a large saucepan or Dutch oven; cover with water.  Bring to boil & reduce heat.  Cover and cook 25-40 minutes or until tender.  Drain; cool slighly and peel.  Cut into chunks.</li>
+			<li>Preheat oven to 350.  Place sweet potatoes in a 2-qt. baking dish.  In a small saucepan, combine butter, syrup, brown sugar, and cinnamon.  Bring to a boil, stirring constantly.  Pour over potatoes.</li>
+			<li>Bake, uncovered, 30-40 minutes or until heated through.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

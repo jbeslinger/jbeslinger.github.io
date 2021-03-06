@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Sour Pomegranate Magnesium Gummies</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.paleorunningmomma.com/wp-content/uploads/2016/06/cherry-lime-sour-gummy-candies-500x500.jpg"></td>
+			<td><h1>Sour Pomegranate Magnesium Gummies</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 10 minutes</p></td>
+				<td><p>Total time: 3 hours</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Servings: <input type="number" min="0" value="30" step="1" onchange="recipe.adjustIngredients(this.value/30)"> gummies</p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Sour, sweet, oddly shaped, and heaping with vitamins.  These are a great way to get rid of that magnesium citrate that you purchased for $16 and can't drink with water (like how the damn label wants you to).</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="3/4" data-unit="cup">3/4 cup</span> unsweetened pomegranate juice (or whatever juice you want)</li>
+			<li><span class="ingredient" data-quantity="3" data-unit="tablespoon">3 tablespoons</span> gelatin</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> magnesium citrate powder</li>
+			
+			<p>Also required</p>
+			<li>Small silicone candy mold of your choice</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>In a small saucepan, add juice, sea salt, and magnesium.  Sprinkle the gelatin powder over the juice mixture in the saucepan (no heat yet) and whisk to combine.  Allow this mixture to sit for about 5 minutes.  This is called "blooming" the gelatin.</li>
+			<li>Turn burner to low-medium heat.  As the mixture heats up, it will start to liquify.  Once the gelatin is dissolved, turn off the heat.  Whisk once more to combine.</li>
+			<li>Pour the mixture into molds.  You can also pour the mixture into a baking dish and cut out the shapes later if you have no mold.  Also, be sure to use cooking spray to make sure they pop out easily.</li>
+			<li>Refrigerate the molds for a few hours or until fully set.  Then carefully pop out the molds and place in a storage container in the fridge.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

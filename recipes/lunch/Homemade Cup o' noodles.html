@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title>Homemade Instant Noodles</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.seriouseats.com/images/2014/09/20140929-instant-noodles-diy-recipe-sesame-miso-vegetable-15.jpg"></td>
+			<td><h1>Homemade Instant Noodles</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 10 minutes</p></td>
+				<td><p>Total time: 10 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Makes <input type="number" min="0" value="1" step="1" onchange="recipe.adjustIngredients(this.value/1)"> noodle cup</p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Love the handiness of instant lunch but have high blood pressure?  Well, try these out before signing those yoga classes.  Much healthier and lots more tasty.  Lasts for atleast a week in the fridge.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="2" data-unit="teaspoon">2 teaspoons</span> flavor base</li>
+			<ul>
+				<i><li>Soup stock paste (like Better Than Bouillon), miso paste, curry paste</li></i>
+			</ul>
+
+			<li><span class="ingredient" data-quantity="2" data-unit="teaspoon">2 teaspoons</span> extra flavorings (optional)</li>
+			<ul>
+				<i><li>Chili-garlic sauce, soy sauce or tamari, coconut milk, sesame oil, Sriracha or other hot sauce</li></i>
+			</ul>
+			
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> filler ingredients</li>
+			<ul>
+				<i><li>Frozen corn, frozen carrots, frozen peas, diced tofu, leftover cooked meat, dried or thinly sliced mushrooms, thinly sliced spinach or other hearty greens, kimchi, soft-boiled or hard-boiled egg, ramen egg</li></i>
+			</ul>
+
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> noodles</li>
+			<ul>
+				<i><li>Cooked udon, cooked yakisoba or ramen, cooked soba noodles, cooked spaghetti or fettuccine, cooked rice noodles, cooked shirataki noodles, dry vermicelli or maifun noodles</li></i>
+			</ul>
+
+			<li><span class="ingredient" data-quantity="1/2" data-unit="cup">1/2 cup</span> fresh ingredients</li>
+			<ul>
+				<i><li>Fresh herbs, sliced green onions, bean sprouts, sliced lime or lemon</li></i>
+			</ul>
+
+			<p>Equipment</p>
+			<li>Pint-sized widemouth glass jars with lids, or other heatproof containers</li>
+			<li>Chopsticks or a fork, for eating</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<p>For prepping the cups</p>
+		<ol>
+			<li>Place flavor base and flavor extras in the bottom of the cup: If it's a paste, like soup stock or miso paste, spread it around a little so it dissolves more easily once you add the hot water. Also add any flavoring extras.</li>
+			<li>Top with filler ingredients: Scatter your filler ingredients over the top of the paste. It's OK if they get mixed in with the flavor base and extras.</li>
+			<li>Add the noodles: Pack the noodles down so they're fairly compact. It's fine if they stick together — they will un-stick once you add the water.</li>
+			<li>Finish with the fresh ingredients: If you'd like to keep these from getting mixed into the hot soup, pack these into a baggie that can be removed just before you add the water.</li>
+			<li>Seal and refrigerate: Place the lid on the container and refrigerate for up to a week. Use a dry-erase marker or masking tape label to write the contents of each jar so you can easily grab whichever combo of ingredients you want that day. (It's best to keep the jars refrigerated until you're ready to eat, but it's OK to stash them in your bag for up to two hours.)</li>
+		</ol>
+
+		<p>For cooking the cup</p>
+		<ol>
+			<li>Top with hot water: When you're ready to eat, unscrew the lid and pour enough boiling water over the top of the noodles to cover.</li>
+			<li>Cover and steep: Place the lid back over the container. Let the soup steep for 2 to 3 minutes. The ingredients should be warmed through, but the soup is still nicely hot.</li>
+			<li>Stir thoroughly: Reach your chopsticks or fork deep into the cup and stir everything around thoroughly to mix the flavor base into the water and mix the filler ingredients into the noodles. (Alternatively, you can pour the soup out into a bowl and mix everything there.)</li>
+			<li>Eat right away! If you kept your fresh ingredients separate in a bag, scatter them over the top of the soup before eating.</li>
+		</ol>
+
+		<p>Flavor ideas</p>
+		<ul>
+			<p>Spicy Kimchi Beef</p>
+			<li>Beef base, shiitake mushrooms, beef jerky, kimchi, chili-garlic sauce, scallions, and noodles.</li>
+
+			<p>Chicken and Dill</p>
+			<li>Rotisserie chicken, chicken base, sliced onions, frozen peas, and cooked noodles.  Minced dill in the flavor pack.</li>
+
+			<p>Vegetable With Sesame-Miso</p>
+			<li>Vegetable base, grated ginger, miso paste, soy sauce, sesame tahini.  Julienned carrots, sliced shiitake mushrooms, torn spinach. Scallions & pickled ginger for the flavor pack.</li>
+
+			<p>Thai Coconut Curry Shrimp</p>
+			<li>Chicken base mixed with Thai red curry paste, some chili-garlic sauce (for extra heat), a dash of fish sauce, some brown sugar, and a bit of coconut milk.  Cooked shrimp, thinly sliced mushrooms, rice vermicelli.  Scallions, chopped cilantro, wedge of lime for the flavor pack.</li>
+		</ul>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

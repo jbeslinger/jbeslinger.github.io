@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Olive Oil Mayonnaise</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.kitchenkonfidence.com/wp-content/uploads/2013/04/Homemade-Mayo-scaled-150x150.jpg"></td>
+			<td><h1>Olive Oil Mayonnaise</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 30 seconds</p></td>
+				<td><p>Total time: 30 seconds</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Makes <input id="serves" type="number" min="0" value="1" step="1" onchange="recipe.adjustIngredients(this.value/1);updateCalories();"> cup(s)</p></td>
+				<td><p>Calories: <input id="calories" type="number" min="0" value="" step="50"></p></td>
+				<td><p>Per serving: <input id="per_serving" type="number" min="0" value="1798" step="50" onchange="updateCalories();"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p></p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="" data-unit="">1 egg</span>, yolk</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 tablespoon</span> freshly squeezed lemon juice</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 tablespoon</span> water</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 teaspoon</span> Dijon mustard</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 cup</span> olive oil (not extra virgin)</li>
+			<li>Sea salt to taste</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Place egg yolk, lemon juice, water and mustard in a narrow, tall container. I used a Weck jar. Pour over olive oil, then let the contents settle for a moment.</li>
+			<li>Using an immersion blender, process until the mayo starts to form. Once you start seeing mayo, gently move the blender up and down. Continue until all oil is emulsified. The texture will be thick.</li>
+			<li>Season to taste with kosher salt and store in the refrigerator for up to several weeks.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+    <script>
+    	function updateCalories()
+    	{
+    		var serves = document.getElementById("serves");
+			var calories = document.getElementById("calories");
+			var per_serving = document.getElementById("per_serving");
+			calories.value = per_serving.value * serves.value;
+		}
+		updateCalories();
+	</script>
+</body>
+</html>

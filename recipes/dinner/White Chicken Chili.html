@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>White Chicken Chili</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.tasteofhome.com/wp-content/uploads/2018/05/White-Chicken-Chili_EXPS_MRRMZ16_43662_D09_15_1b.jpg"></td>
+			<td><h1>White Chicken Chili</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time:  minutes</p></td>
+				<td><p>Total time:  minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="6" step="1" onchange="recipe.adjustIngredients(this.value/6)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Warming, creamy, perfectly comforting.  Great alternative to beef chili, easier on the stomach, and is a simple, delicious dinner.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<p>For chili</p>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> onion, yellow small, diced</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> olive oil</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="clove">2 cloves</span> garlic</li>
+			<li><span class="ingredient" data-quantity="29" data-unit="ounce">29 ounces</span> low-sodium chicken broth</li>
+			<li><span class="ingredient" data-quantity="7" data-unit="ounce">7 ounces</span> green chilis, canned</li>
+			<li><span class="ingredient" data-quantity="1 1/2" data-unit="teaspoon">1 1/2 teaspoons</span> ground cumin</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> paprika</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> dried oregano</li>
+			<li><span class="ingredient" data-quantity="1/2" data-unit="teaspoon">1/2 teaspoon</span> ground coriander</li>
+			<li><span class="ingredient" data-quantity="1/4" data-unit="teaspoon">1/4 teaspoon</span> cayenne pepper</li>
+			<li><span class="ingredient" data-quantity="8" data-unit="ounce">8 ounces</span> Neufchatel cheese (light cream cheese), cut into small cubes</li>
+			<li><span class="ingredient" data-quantity="1 1/4" data-unit="cup">1 1/4 cups</span> frozen corn</li>
+			<li><span class="ingredient" data-quantity="30" data-unit="ounce">30 ounces</span> cannellini beans, canned</li>
+			<li><span class="ingredient" data-quantity="2 1/2" data-unit="cup">2 1/2 cups</span> shredded cooked rotisserie chicken</li>
+
+			<p>For garnish</p>
+			<li>Lime juice</li>
+			<li>Chopped, fresh cilantro</li>
+			<li>Tortilla chips or strips, monterrey jack cheese, sliced avocado</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Heat olive oil in a dutch oven over medium-heat.  Add onion and saute for 4 minutes or until translucent, then add garlic and saute further for a minute.</li>
+			<li>Add chicken broth, green chilies, cumin, paprika, oregano, coriander, cayenne pepper, and season with salt and pepper.  Bring mixture to a boil and reduce heat to simmer for 15 minutes.</li>
+			<li>Drain and rinse beans then measure out a cup.  Set whole beans aside and transfer 1 cup of beans to a food processor with 1/4 cup chicken broth.  Puree until nearly smooth.</li>
+			<li>Add cheese to soup along with corn, whole beans, and pureed beans.  Stir will and simmer for 5-10 minutes longer.</li>
+			<li>Stir in chicken, fresh lime juice, and cilantro.  Serve with monterrey jack cheese, cilantro, avocado slices, and tortilla chips if desired.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>

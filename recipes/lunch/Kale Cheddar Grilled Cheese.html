@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Grown-Up Grilled Cheese</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://www.justataste.com/wp-content/uploads/2013/10/grown-up-grilled-cheese-sandwich-recipe-1-500x500.jpg"></td>
+			<td><h1>Grown-Up Grilled Cheese</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 45 minutes</p></td>
+				<td><p>Total time: 45 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input type="number" min="0" value="2" step="1" onchange="recipe.adjustIngredients(this.value/2)"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>This grilled cheese is more than just fat and bread.  It's full of cheap, healthy kale and rich, complex flavor that's sure to wow any grilled cheese fan.  A panini press is perfect for this sandwich.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<p>For the caramelized onions</p>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> olive oil</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="">1</span> onion, large, yellow or white</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="tablespoon">2 tablespoons</span> sugar</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="ounce">2 ounces</span> balsamic vinegar</li>
+
+			<p>For the grilled cheese</p>
+			<li><span class="ingredient" data-quantity="4" data-unit="slice">4 slices</span> bread, sourdough or brioche</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="tablespoon">1 tablespoon</span> butter</li>
+			<li><span class="ingredient" data-quantity="4" data-unit="slice">4 slices</span> sharp cheddar cheese</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> kale leaves</li>
+
+			<p>To go with</p>
+			<li><span class="ingredient" data-quantity="4" data-unit="ounce">4 ounces</span> baby carrots</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="stalk">1 stalk</span> celery</li>
+			<li><span class="ingredient" data-quantity="1" data-unit="cup">1 cup</span> apple sauce, unsweetened</li>
+			<li><span class="ingredient" data-quantity="2" data-unit="ounce">2 ounces</span> mixed nuts, salted</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<p>Make the onions</p>
+			<li>Heat the oil in a saucepan over medium heat.  Add the sliced onions, salt and pepper.  Cook until the onions are soft, maybe 10 minutes.</li>
+			<li>Add the sugar and continue cooking the onions for 5 more minutes.</li>
+			<li>Add the balsamic vinegar and reduce heat to low.  Continue cooking the onions for about 15 minutes until they are soft and dry.</li>
+
+			<p>Assemble the sandwich</p>
+			<li>Slather one side of all four slices of bread with butter and set them aside.</li>
+			<li>Assemble one of the sandwiches by stackign one slice of cheese on a slice of bread and topping it with half the caramelized onions, half the kale leaves, and a second slice of cheese.  Top with another slice of bread.  Do the same for the other sandwich.</li>
+			<li>Reheat the skillet over medium heat.  Place each sandwich in the skillet and press until the bread is toasted and golden.  Flip each sandwich once until both sides are equally toasted and serve.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+</body>
+</html>
