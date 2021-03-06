@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>Paneer</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://healthynibblesandbits.com/wp-content/uploads/2018/10/How-to-Make-Paneer-Square-Picture.jpg"></td>
+			<td><h1>Paneer</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 60 minutes</p></td>
+				<td><p>Total time: 60 minutes</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Makes <input id="serves" type="number" min="0" value="2" step="1" onchange="recipe.adjustIngredients(this.value/2);updateCalories();"> pounds</p></td>
+				<td><p>Calories: <input id="calories" type="number" min="0" value="" step="50"></p></td>
+				<td><p>Per serving: <input id="per_serving" type="number" min="0" value="1980" step="50" onchange="updateCalories();"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Used in many Indian dishes; you can fry it, season it, spank it. It's a miracle food, full of protein and love.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="" data-unit="">1 gallon</span> whole milk, non-UHT if possible</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1 pint</span> heavy cream (optional, adds calories)</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">2 teaspoons</span> citric acid crystals</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">4 tablespoons</span> distilled water</li>
+			
+			<p>Also needed</p>
+			<li>Cheesecloth, bandana, or similar straining bag</li>
+			<li>Sieve</li>
+			<li>Weights (I use 20lb)</li>
+			<li>Two plates</li>
+			<li>Sea salt to taste</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>Bring the milk (and optional cream) to a near boil (200°F) while making sure to stir constantly and scrape the bottom of the pot.</li>
+			<li>Meanwhile, in a separate bowl mix together the critic acid crystals and water.</li>
+			<li>Take the milk off of the heat and pour in the citric acid-water solution. You'll notice the milk immediately start to curdle and separate from the whey (yellow-ish liquid). Stir very gently as you do not want to break up the curds unless you're making ricotta. Cover and let sit for 10 minutes.</li>
+			<li>Line the sieve with the cheesecloth and, once the 10 minutes it up, carefully strain the cheesecurds from the whey. It's important not to waste food so please catch the whey in a bowl under the sieve. It can be used for many recipes including smoothies and fresh bread.</li>
+			<li>Gather the cloth in your hands, pinch the top, and squeeze the remaining whey from the curds. The drier, the better.</li>
+			<li>Once no more whey comes out by hand, open the cloth and gently form the curds into a square shape. Feel free to mix in salt at this point also.</li>
+			<li>Bundle it back up into the cloth (square shape also) and place it on a plate. Top with another plate and the weights then leave it on the counter at room temp. Be wary of more liquid escaping. Press for at least 15 minutes or up to 1 hour and intermittently pour off the excess whey that comes out.</li>
+			<li>Immediately place this in the fridge and use within the next couple days or freeze for a couple month's use. Cool, refrigerated paneer is less likely to crumble when you fry it! If it melts in the pan, it means the cheese is too wet still and must have needed more pressing. But you can still make a badass grilled cheese with it.</li>
+		</ol>
+		<p>Notes</p>
+		<ul>
+			<li>Feel free to spice this cheese up as well, but use dry, whole spices.</li>
+			<li>You must boil place the spices in the milk from the start (the preboil stage).</li>
+			<li>Example: cumin seeds, oregano, dried red chili flakes</li>
+			<li>Example: chopped nuts, black pepper; eaten with honey</li>
+			<li>Example: coriander and mint leaves</li>
+			<li>Example: parsley, basil, oregano, garlic powder</li>
+			<li>Example: garlic powder, onion powder, dill</li>
+			<br />
+			<li>Also, use different kinds of milk! Goat, buffalo, cat, what the hell ever.</li>
+		</ul>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+    <script>
+    	function updateCalories()
+    	{
+    		var serves = document.getElementById("serves");
+			var calories = document.getElementById("calories");
+			var per_serving = document.getElementById("per_serving");
+			calories.value = per_serving.value * serves.value;
+		}
+		updateCalories();
+	</script>
+</body>
+</html>
