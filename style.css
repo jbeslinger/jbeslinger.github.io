@@ -1,28 +1,49 @@
-span
-{
-	font-family:			'Courier New', monospace;
-	color:					white;
+/* NAVBAR */
+ul.navbar {
+	list-style-type:		none;
+	margin-top:				-8px;
+	padding:				0;
+	width:					96px;
+	background-color:		#302020;
+	height:					100%;
+	position:				fixed;
+	overflow:				auto;
 }
+	ul.navbar li {
+		background-color:	#706060;
+	}
+		ul.navbar li a {
+			width: 100%;
+			height: 100%;
+		}
+		ul.navbar li:hover {
+			background-color:	#9A8A8A;
+		}
 
-.lite
-{
+
+/* BODY */
+body.lite {
+	margin:					0;
 	background-image:		url(images/background_lite.png);
 }
-.dark
-{
+body.dark {
+	margin:					0;
 	background-image:		url(images/background_dark.png);
 }
 
-.container
-{
+
+/* CONTAINER */
+div.container {
 	position:				relative;
+	margin-left:			112px;
+	margin-top:				8px;
+	margin-right:			8px;
+	margin-bottom:			8px;
 	padding:				32px;
 	background:				#302020;
-	height:					80%;
 	box-shadow:				4px 4px 8px #302020
 }
-	.container .top
-	{
+	div.container div.top {
 		position:			absolute;
 		background-image:	url(images/bdr-top.png);
 		top:				0;
@@ -30,8 +51,7 @@ span
 		width:				100%;
 		height:				32px;
 	}
-	.container .top-left
-	{
+	div.container div.top-left {
 		position:			absolute;
 		background-image:	url(images/bdr-tpleft.png);
 		top:				0;
@@ -39,8 +59,7 @@ span
 		width:				32px;
 		height:				32px;
 	}
-	.container .left
-	{
+	div.container div.left {
 	    position:			absolute;
 	    background-image:	url(images/bdr-left.png);
 	    top:				0;
@@ -48,8 +67,7 @@ span
 	    width:				32px;
 	    height:				100%;
 	}
-	.container .top-right
-	{
+	div.container div.top-right {
 		position:			absolute;
 		background-image:	url(images/bdr-tpright.png);
 		top:				0;
@@ -57,8 +75,7 @@ span
 		width:				32px;
 		height:				32px;
 	}
-	.container .right
-	{
+	div.right {
 	    position:			absolute;
 	    background-image:	url(images/bdr-right.png);
 	    top:				0;
@@ -66,8 +83,7 @@ span
 	    width:				32px;
 	    height:				100%;
 	}
-	.container .bottom
-	{
+	div.container div.bottom {
 	    position:			absolute;
 	    background-image:	url(images/bdr-bottom.png);
 	    bottom:				0;
@@ -75,8 +91,7 @@ span
 	    width:				100%;
 	    height:				32px;
 	}
-	.container .bottom-left
-	{
+	div.container div.bottom-left {
 	    position:			absolute;
 	    background-image:	url(images/bdr-btleft.png);
 	    bottom:				0;
@@ -84,8 +99,7 @@ span
 	    width:				32px;
 	    height:				32px;
 	}
-	.container .bottom-right
-	{
+	div.container div.bottom-right {
 	    position:			absolute;
 	    background-image:	url(images/bdr-btright.png);
 	    bottom:				0;
@@ -93,3 +107,17 @@ span
 	    width:				32px;
 	    height:				32px;
 	}
+
+
+/* MISC */
+div.container span {
+	font-family:			'Courier New', monospace;
+	color:					white;
+}
+
+div.sticky {
+	position:				fixed;
+	bottom:					0px;
+	left:					0px;
+	padding:				16px;
+}
