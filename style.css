@@ -112,16 +112,25 @@ div.container {
 
 /* MISC */
 div.container h1 {
+	margin-top:				12px;
+	margin-bottom:			24px;
 	font-family:			'Courier New', monospace;
 	font-size:				48pt;
 	font-style:				bold;
 	color:					white;
 }
-
 div.container span {
 	font-family:			'Courier New', monospace;
 	font-size:				16pt;
 	color:					white;
+}
+div.container a {
+	font-family:			'Courier New', monospace;
+	font-size:				16pt;
+	color:					white;
+}
+div.container a:hover {
+	font-style:				italic;
 }
 
 div.sticky {

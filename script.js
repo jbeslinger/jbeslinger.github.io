@@ -1,4 +1,7 @@
 function Init() {
+	var b = document.body;
+	b.classList.add(localStorage.getItem("theme"));
+
 	LoadNavbar();
 	LoadContainers();
 }
@@ -32,4 +35,14 @@ function LoadContainers() {
 			<div class="bottom-right"></div>
 			` + divs[i].innerHTML;
 	}
+}
+
+function ToggleDarkMode() {
+var b = document.body;
+b.classList.toggle("dark");
+
+if (b.classList.contains("dark"))
+	localStorage.setItem("theme", "dark");
+else
+	localStorage.setItem("theme", "lite");
 }
