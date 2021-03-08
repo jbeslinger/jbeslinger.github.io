@@ -36,9 +36,9 @@ body.dark {
 /* CONTAINER */
 div.container {
 	position:				relative;
-	margin-left:			80px;
+	margin-left:			96px;
 	margin-top:				8px;
-	margin-right:			8px;
+	margin-right:			32px;
 	margin-bottom:			8px;
 	padding:				32px;
 	background:				#302020;
