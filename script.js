@@ -1,6 +1,13 @@
 function Init() {
 	var b = document.body;
 	b.classList.add(localStorage.getItem("theme"));
+	
+	if (document.getElementById("avatar") != null) {
+		if (b.classList.contains("dark"))
+			document.getElementById("avatar").setAttribute("src", "images/av_nite.png")
+		else
+			document.getElementById("avatar").setAttribute("src", "images/av_day.png")
+	}
 
 	LoadNavbar();
 	LoadContainers();
@@ -38,11 +45,19 @@ function LoadContainers() {
 }
 
 function ToggleDarkMode() {
-var b = document.body;
-b.classList.toggle("dark");
+	var b = document.body;
+	b.classList.toggle("dark");
 
-if (b.classList.contains("dark"))
-	localStorage.setItem("theme", "dark");
-else
-	localStorage.setItem("theme", "lite");
+	if (b.classList.contains("dark"))
+	{
+		if (document.getElementById("avatar") != null)
+			document.getElementById("avatar").setAttribute("src", "images/av_nite.png")
+		localStorage.setItem("theme", "dark");
+	}
+	else
+	{
+		if (document.getElementById("avatar") != null)
+			document.getElementById("avatar").setAttribute("src", "images/av_day.png")
+		localStorage.setItem("theme", "lite");
+	}
 }
