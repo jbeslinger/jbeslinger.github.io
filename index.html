@@ -4,11 +4,11 @@
 		<link rel="stylesheet" href="style.css">
 		<title>Joshua Eslinger | Game Developer | Freelance Programmer</title>
 	</head>
-	<body class="lite" onload="Init()">
+	<body class="lite" onload="Init();LoadSprite();">
 		<ul id="navbar"></ul>
 
 		<div class="container">
-			<h1><img id="avatar" style="vertical-align: -60%;" />
+			<h1><img id="avatar" onmouseover="SwapSprite();" onmouseleave="SwapSprite();" style="vertical-align:-60%;" />
 				- "Yo! I'm Josh."</h1>
 			<span>&bull; <i>Video Game Developer / Player, Freelance Programmer, Tinkerer</i></span>
 		</div>
@@ -39,4 +39,31 @@
 		<div class="sticky"><a href="#"><img src="images/settings.png" onclick="ToggleDarkMode()"></a></div>
 	</body>
 	<script src="script.js"></script>
+	<script type="text/javascript">
+		function LoadSprite() {
+			var b = document.body;
+			if (b.classList.contains("dark"))
+				document.getElementById("avatar").setAttribute("src", "images/av_nite1.png");
+			else
+				document.getElementById("avatar").setAttribute("src", "images/av_day1.png");
+		}
+
+		function SwapSprite() {
+			var av = document.getElementById("avatar");
+			switch (av.getAttribute("src")) {
+				case "images/av_nite1.png":
+				av.setAttribute("src", "images/av_nite2.png")
+				break;
+				case "images/av_nite2.png":
+				av.setAttribute("src", "images/av_nite1.png")
+				break;
+				case "images/av_day1.png":
+				av.setAttribute("src", "images/av_day2.png")
+				break;
+				case "images/av_day2.png":
+				av.setAttribute("src", "images/av_day1.png")
+				break;
+			}
+		}
+	</script>
 </html>

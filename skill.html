@@ -4,21 +4,51 @@
 		<link rel="stylesheet" href="style.css">
 		<title>Joshua Eslinger | Game Developer | Freelance Programmer</title>
 	</head>
-	<body class="lite" onload="Init()">
+	<body class="lite" onload="Init();LoadSkillBars()">
 		<ul id="navbar"></ul>
 
 		<div class="container">
-			<h1><img src="images/av_about.png" style="vertical-align: -60%;" />
-				- Skills and Education</h1>
+			<h1><img src="images/av_about.png" style="vertical-align:-60%;" />
+				- Stats</h1>
 		</div>
 
 		<div class="container">
-			<span></span>
-			<br />
-			<span></span>
+			<table>
+				<tr>
+					<td><img src="images/face.png"></td>
+					<td>
+						<span>Skills</span>
+						<div class="skill" lvl="2" lbl="C/C++">         <span class="val" style="background-color:#650aa6;" /></div>
+						<div class="skill" lvl="4" lbl="C#">            <span class="val" style="background-color:#c92216;" /></div>
+						<div class="skill" lvl="3" lbl="Java">          <span class="val" style="background-color:#10b01d;" /></div>
+						<div class="skill" lvl="2" lbl="GLSL/Cg">       <span class="val" style="background-color:#686969;" /></div>
+						<div class="skill" lvl="3" lbl="HTML">          <span class="val" style="background-color:#a2ad02;" /></div>
+						<div class="skill" lvl="3" lbl="CSS">           <span class="val" style="background-color:#09ad79;" /></div>
+						<div class="skill" lvl="2" lbl="JavaScript">    <span class="val" style="background-color:#0a1fa6;" /></div>
+						<div class="skill" lvl="3" lbl="SQL">           <span class="val" style="background-color:#d16308;" /></div>
+						<div class="skill" lvl="1" lbl="Python">        <span class="val" style="background-color:#ad0285;" /></div>
+					</td>
+					<td>
+						<span></span>
+					</td>
+					<td>
+						<span>Education</span>
+					</td>
+				</tr>
+			</table>
 		</div>
 
 		<div class="sticky"><a href="#"><img src="images/settings.png" onclick="ToggleDarkMode()"></a></div>
 	</body>
 	<script src="script.js"></script>
+	<script type="text/javascript">
+		function LoadSkillBars() {
+			var skillbars = document.getElementsByClassName("skill");
+			var values = document.getElementsByClassName("val");
+			for (var i = 0; i < skillbars.length; i++) {
+				var level = skillbars[i].getAttribute("lvl");
+				values[i].setAttribute("style", values[i].getAttribute("style")+"width:"+(level/5)*100+"%;");
+			}
+		}
+	</script>
 </html>

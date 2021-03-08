@@ -138,3 +138,39 @@ div.sticky {
 	bottom:					0px;
 	left:					0px;
 }
+
+
+/* SKILLBAR */
+.skill {
+	margin:					16px;
+	height:					16px;
+	width:					256px;
+	outline-style:			solid;
+	outline-width:			2px;
+	outline-color:			white;
+	background-color:		rgb(62,39,39);
+	position:				relative;
+}
+.skill:before {
+	left:					8px;
+	text-align:				left;
+	color:					white;
+	font-weight:			bold;
+	font-size:				10pt;
+	content:				attr(lbl);
+	position:				absolute;
+}
+.skill:after {
+	right:					8px;
+	text-align:				right;
+	color:					white;
+	font-weight:			bold;
+	font-size:				10pt;
+	content:				attr(lvl);
+	position:				absolute;
+}
+.skill .val {
+	background-color:		rgb(112,63,255);
+	display:				inline-block;
+	height:					100%;
+}
