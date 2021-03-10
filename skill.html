@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="style.css">
 		<title>Joshua Eslinger | Game Developer | Freelance Programmer</title>
 	</head>
-	<body class="lite" onload="Init();LoadSkillBars()">
+	<body class="lite" onload="Init();LoadSkillBars();CalcAge();">
 		<ul id="navbar"></ul>
 
 		<div class="container">
@@ -15,24 +15,46 @@
 		<div class="container">
 			<table>
 				<tr>
-					<td><img src="images/face.png"></td>
-					<td>
-						<span>Skills</span>
-						<div class="skill" lvl="2" lbl="C/C++">         <span class="val" style="background-color:#650aa6;" /></div>
-						<div class="skill" lvl="4" lbl="C#">            <span class="val" style="background-color:#c92216;" /></div>
-						<div class="skill" lvl="3" lbl="Java">          <span class="val" style="background-color:#10b01d;" /></div>
-						<div class="skill" lvl="2" lbl="GLSL/Cg">       <span class="val" style="background-color:#686969;" /></div>
-						<div class="skill" lvl="3" lbl="HTML">          <span class="val" style="background-color:#a2ad02;" /></div>
-						<div class="skill" lvl="3" lbl="CSS">           <span class="val" style="background-color:#09ad79;" /></div>
-						<div class="skill" lvl="2" lbl="JavaScript">    <span class="val" style="background-color:#0a1fa6;" /></div>
-						<div class="skill" lvl="3" lbl="SQL">           <span class="val" style="background-color:#d16308;" /></div>
-						<div class="skill" lvl="1" lbl="Python">        <span class="val" style="background-color:#ad0285;" /></div>
+					<td style="text-align:center; vertical-align:middle;">
+						<span id="age"><b>LVL XX</b></span> <br />
+						<img src="images/face.png" />
 					</td>
-					<td>
-						<span></span>
+					<td style="text-align:center; vertical-align:middle;">
+						<span><b>Skills</b></span>
+						<div class="skill" lvl="2" lbl="C/C++">         <span class="val" /></div>
+						<div class="skill" lvl="4" lbl="C#">            <span class="val" /></div>
+						<div class="skill" lvl="3" lbl="Java">          <span class="val" /></div>
+						<div class="skill" lvl="2" lbl="GLSL/Cg">       <span class="val" /></div>
+						<div class="skill" lvl="3" lbl="HTML">          <span class="val" /></div>
+						<div class="skill" lvl="3" lbl="CSS">           <span class="val" /></div>
+						<div class="skill" lvl="2" lbl="JavaScript">    <span class="val" /></div>
+						<div class="skill" lvl="3" lbl="SQL">           <span class="val" /></div>
+						<div class="skill" lvl="1" lbl="Python">        <span class="val" /></div>
 					</td>
-					<td>
-						<span>Education</span>
+					<td style="text-align:center; vertical-align:middle;">
+						<span><b>Perks</b></span><br />
+						<img src="images/un.png" style="padding:4px;" />
+						<img src="images/ad.png" style="padding:4px;" />
+						<br />
+						<img src="images/vs.png" style="padding:4px;" />
+						<img src="images/sd.png" style="padding:4px;" />
+						<br />
+						<img src="images/gh.png" style="padding:4px;" />
+						<img src="images/cr.png" style="padding:4px;" />
+						<br />
+						<img src="images/as.png" style="padding:4px;" />
+						<img src="images/bl.png" style="padding:4px;" />
+						<br />
+						<img src="images/fl.png" style="padding:4px;" />
+						<img src="images/ps.png" style="padding:4px;" />
+						<br />
+						<img src="images/am.png" style="padding:4px;" />
+						<img src="images/mg.png" style="padding:4px;" />
+						<br />
+						<img src="images/gl.png" style="padding:4px;" />
+					</td>
+					<td style="text-align:center; vertical-align:middle;">
+						<span><b>Education</b></span>
 					</td>
 				</tr>
 			</table>
@@ -42,12 +64,21 @@
 	</body>
 	<script src="script.js"></script>
 	<script type="text/javascript">
+		function CalcAge() {
+			var span		=	document.getElementById("age");
+			var bday		=	new Date('29 Nov 1994');
+			var today		=	new Date();
+			var ageDifMs	=	today - bday.getTime();
+		    var ageDate		=	new Date(ageDifMs);
+			span.innerHTML	=	"LVL " + (ageDate.getUTCFullYear() - 1970);
+		}
+
 		function LoadSkillBars() {
 			var skillbars = document.getElementsByClassName("skill");
 			var values = document.getElementsByClassName("val");
 			for (var i = 0; i < skillbars.length; i++) {
 				var level = skillbars[i].getAttribute("lvl");
-				values[i].setAttribute("style", values[i].getAttribute("style")+"width:"+(level/5)*100+"%;");
+				values[i].setAttribute("style", "width:"+(level/6)*100+"%;");
 			}
 		}
 	</script>
