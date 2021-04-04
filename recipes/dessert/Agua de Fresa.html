@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Agua de Fresa</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="recipe">
+		<table>
+			<td><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F379999.jpg&w=595&h=595&c=sc&poi=face&q=85"></td>
+			<td><h1>Agua de Fresa</h1></td>
+		</table>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><p>Active time: 25 minutes</p></td>
+				<td><p>Total time: 4.5 hours</p></td>
+				<!-- Replace the '4's with the default number of servings -->
+				<td><p>Serves <input id="serves" type="number" min="0" value="10" step="1" onchange="recipe.adjustIngredients(this.value/10);updateCalories();"></p></td>
+				<td><p>Calories: <input id="calories" type="number" min="0" value="" step="50"></p></td>
+				<td><p>Per serving: <input id="per_serving" type="number" min="0" value="100" step="50" onchange="updateCalories();"></p></td>
+			</tr>
+		</table>
+		
+		<!-- Description -->
+		<p>Fresh fruit waters, or Aguas de Frutas, made with crushed or blended fruit are a common and popular drink all over Mexico. This recipe is extremely flavorful and refreshing, especially when fresh strawberries are in season.</p>
+
+		<h2>Ingredients</h2>
+		<ul>
+			<!-- Pretty self explanatory; copy this line for each ingredient; the 'data-unit' is always singular -->
+			<li><span class="ingredient" data-quantity="" data-unit="">4</span> cups strawberries, sliced</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1</span> cup white sugar</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">8</span> cups cold water</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">1</span> lime, cut into 8 wedges</li>
+			<li><span class="ingredient" data-quantity="" data-unit="">8</span> sprig fresh mint</li>
+		</ul>
+
+		<h2>Directions</h2>
+		<ol>
+			<li>In a medium bowl, mix together sliced strawberries, sugar, and 1 cup of water. Cover the bowl with plastic wrap and place in the refrigerator for 4 hours.</li>
+			<li>Remove the strawberry mixture from the refrigerator and pour into a blender. Blend on high until smooth. Pour the blended berry mixture through a wire mesh strainer set over a large mixing bowl; discard the pulp and seeds.</li>
+			<li>Add the remaining 7 cups cold water to the pureed strawberries and mix well. Place the Aqua de Fresa in the refrigerator to chill for several hours or pour over ice and serve immediately. Garnish with lime slices or mint leaves.</li>
+		</ol>
+	</section>
+
+	<!-- This is how the servings math works -->
+	<script src="../recipe.js"></script>
+    <script>recipe.init(document.querySelector('.recipe'))</script>
+    <script>
+    	function updateCalories()
+    	{
+    		var serves = document.getElementById("serves");
+			var calories = document.getElementById("calories");
+			var per_serving = document.getElementById("per_serving");
+			calories.value = per_serving.value * serves.value;
+		}
+		updateCalories();
+	</script>
+</body>
+</html>
